@@ -989,9 +989,9 @@ section{padding:64px 0}h2{font-size:clamp(32px,4vw,52px);line-height:1.15;max-wi
 </style>
 <link rel="canonical" href="https://montell-site.vercel.app/"><link rel="alternate" hreflang="uk" href="https://montell-site.vercel.app/"><link rel="alternate" hreflang="en" href="https://montell-site.vercel.app/en.html"><link rel="alternate" hreflang="x-default" href="https://montell-site.vercel.app/">
 <style>.language-switch{display:flex;align-items:center;gap:3px;border:1px solid var(--stroke);border-radius:999px;padding:3px;flex-shrink:0;margin-left:auto;margin-right:16px}.language-switch a{font-size:12px;font-weight:600;line-height:1;padding:10px;border-radius:999px;color:var(--muted)}.language-switch a[aria-current]{background:#765cff33;color:#fff}.language-switch a:focus-visible{outline:2px solid var(--purple2);outline-offset:2px}.nav-inner{gap:12px}html[lang=en] .hero h1{letter-spacing:-.045em}@media(max-width:600px){.nav-inner{gap:8px}.language-switch{margin-right:0}.nav-links .button{font-size:11px;padding:10px 12px;max-width:130px;text-align:center}.logo{font-size:19px}.language-switch a{padding:9px 7px}}@media(max-width:380px){.nav-links .button{max-width:100px;font-size:10px}.nav-inner{gap:5px}.language-switch{padding:2px}}
-</style><script src="language.js"></script></head>
+</style><script src="language.js"></script><link rel="stylesheet" href="assets/effects.css"></head>
 
-<body><div class="page-bg"><div class="grid"></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div><canvas id="particles"></canvas></div>
+<body><div id="shader-background" aria-hidden="true"></div><div class="page-bg"><div class="grid"></div><div class="orb one"></div><div class="orb two"></div><div class="orb three"></div></div>
 <nav><div class="container nav-inner"><a href="#" class="logo">Montell<span>AI</span></a><div class="language-switch" role="group" aria-label="Мова сайту"><a href="/?lang=uk" lang="uk" hreflang="uk" aria-current="page">УКР</a><a href="/en.html?lang=en" lang="en" hreflang="en" >EN</a></div><div class="nav-links"><a href="#solution">Можливості</a><a href="#business">Для кого</a><a href="#integrations">Інтеграції</a><a href="#terms">Пакети</a><a class="button telegram-link" href="https://t.me/montellai" target="_blank" rel="noopener noreferrer">Персональна демонстрація</a></div></div></nav>
 <main><section class="hero"><div class="container"><div class="hero-content"><div class="hero-badge"><span class="pulse"></span>AI-адміністратор для бізнесу</div><h1>Жодне звернення<br><span class="gradient">не повинно губитися.</span></h1><p class="hero-sub">AI-адміністратор, який відповідає клієнту за 30 секунд, підбирає послугу і записує на вільний час — вдень, вночі та у вихідні.</p><div class="hero-actions"><a class="button ghost" href="#solution">Подивитися приклад →</a><a class="button telegram-link" href="https://t.me/montellai" target="_blank" rel="noopener noreferrer">Персональна демонстрація</a></div><div class="hero-note">Персональна демонстрація — 10–15 хвилин</div></div></div></section>
 <section id="problems"><div class="container"><div class="kicker">Де бізнес втрачає клієнтів</div><h2>Клієнт уже написав.<br>AI-автоматизація допомагає не втратити його.</h2><p class="lead">Від повільних відповідей до забутих повторних звернень — автоматизуємо процеси, які допомагають розв’язати ці проблеми.</p><div class="pain-grid"><article class="glass pain-card"><span class="number">01</span><h3>Клієнти губляться через повільні відповіді</h3><p>Людина написала ввечері, у вихідний або поки менеджер зайнятий — відповіді немає. Вона просто йде до того, хто відповів першим.</p></article><article class="glass pain-card"><span class="number">02</span><h3>Менеджери витрачають більшу частину часу на однотипні запитання</h3><p>«Скільки коштує?», «Чи є вільний час?», «Коли доставка?», «Які документи потрібні?», «Чи є в наявності?» — замість продажів співробітники постійно працюють як довідкова служба.</p></article><article class="glass pain-card"><span class="number">03</span><h3>Заявки розкидані по різних каналах</h3><p>Instagram, Telegram, сайт, дзвінки та інші канали існують окремо. Повідомлення легко пропустити, забути або опрацювати надто пізно.</p></article><article class="glass pain-card"><span class="number">04</span><h3>Немає системного follow-up — потенційні клієнти зникають</h3><p>«Я подумаю», «напишіть пізніше», «повернуся навесні» — менеджер забуває повернутися до людини. А це вже лід, за залучення якого бізнес часто заплатив.</p></article><article class="glass pain-card"><span class="number">05</span><h3>Не працюють з існуючою клієнтською базою</h3><p>Клієнт уже купував, лікувався, подорожував або навчався — але йому ніхто автоматично не нагадує про повторний запис, наступну покупку чи додаткову послугу. Це один із найдешевших способів отримувати повторну виручку.</p></article><article class="glass pain-card"><span class="number">06</span><h3>Людський фактор напряму коштує бізнесу грошей</h3><p>Менеджер зайнятий, захворів, пішов додому, забув повідомлення, не передзвонив або неправильно кваліфікував заявку — і бізнес втрачає гроші. Особливо критично це вночі, ввечері, у вихідні та під час пікових навантажень.</p></article></div></div></section>
@@ -1014,113 +1014,7 @@ section{padding:64px 0}h2{font-size:clamp(32px,4vw,52px);line-height:1.15;max-wi
     <div class="faq"><details class="faq-item"><summary>Чи замінює AI адміністратора?</summary><p>Montell AI допомагає з повторюваними зверненнями. Якщо ситуація потребує людини, діалог може бути переданий адміністратору.</p></details><details class="faq-item"><summary>Чи працюватиме AI з нашими послугами?</summary><p>База знань, послуги, ціни, спеціалісти, тривалість процедур та правила запису налаштовуються для конкретного бізнесу.</p></details><details class="faq-item"><summary>Чи можна підключити нашу CRM?</summary><p>Це залежить від її API. Перед підключенням потрібно перевірити доступ до розкладу та можливості створення, перенесення і скасування записів.</p></details><details class="faq-item"><summary>Чи є на сайті працюючий AI-чат?</summary><p>На сайті є демо-чат із відповідями про послуги, пакети та підключення Montell AI. Зараз він працює за підготовленими сценаріями та не створює реальних записів. Робочого AI-агента підключаємо до бази знань, календаря і CRM конкретного бізнесу. Його можливості покажемо за 15 хвилин на персональній демонстрації.</p></details><details class="faq-item"><summary>Скільки коштує підключення і скільки воно займає?</summary><p>Quick Start — $500, Premium — $850, Vip — від $1500. Підключення займає від 3 до 14 робочих днів залежно від пакета.</p></details><details class="faq-item"><summary>Що узгодити для роботи з даними клієнтів?</summary><p>До підключення потрібно визначити доступ до переписок, зберігання й видалення даних та правила передачі діалогу людині. </p></details></div></div></section></main>
 <footer><div class="container footer-grid"><div><a class="logo" href="#">Montell <span>AI</span></a><p>Montell AI — впроваджуємо AI-автоматизацію для бізнесу. Допомагаємо компаніям економити час, не втрачати клієнтів і збільшувати продажі за допомогою AI-агентів та інтеграцій.</p><a class="social-link" href="https://t.me/montellai" target="_blank" rel="noopener noreferrer" aria-label="Montell AI у Telegram">↗ Telegram</a></div><div><h3>Послуги</h3><ul><li>AI-агенти для бізнесу</li><li>Автоматизація продажів</li><li>Інтеграція з CRM та сервісами</li><li>Telegram-боти та чат-автоматизація</li><li>AI-асистенти для підтримки клієнтів</li><li>Аудит та оптимізація процесів</li><li>Консультації та технічна підтримка</li></ul></div><div><h3>Контакти</h3><address><a href="mailto:montellai.support@gmail.com">✉ montellai.support@gmail.com</a><a href="tel:+380668187752">☎ +38 066 818 77 52</a><a href="https://t.me/montellai" target="_blank" rel="noopener noreferrer">↗ @montellai</a></address><h3 class="subscribe-title">Підпишіться</h3><form id="newsletter"><label class="sr-only" for="news-email">Email для новин</label><div class="subscribe-row"><input id="news-email" type="email" placeholder="Email для новин" required maxlength="254"><button class="button" aria-label="Надіслати запит на підписку">→</button></div><p class="subscribe-note">Відкриється лист із запитом на підписку.</p></form></div></div><div class="container copyright">© 2026 Montell AI</div></footer>
 
-<script>/* BACKGROUND PARTICLES */
-
-  const canvas = document.getElementById("particles");
-  const ctx = canvas.getContext("2d");
-
-  let width;
-  let height;
-
-  const particles = [];
-
-  function resize() {
-
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-
-  }
-
-  window.addEventListener("resize", resize);
-  resize();
-
-  class Particle {
-
-    constructor() {
-      this.reset();
-    }
-
-    reset() {
-
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-
-      this.size = Math.random() * 1.5 + .3;
-
-      this.speedX =
-        (Math.random() - .5) * .18;
-
-      this.speedY =
-        (Math.random() - .5) * .18;
-
-      this.alpha =
-        Math.random() * .35 + .05;
-
-    }
-
-    update() {
-
-      this.x += this.speedX;
-      this.y += this.speedY;
-
-      if (
-        this.x < 0 ||
-        this.x > width ||
-        this.y < 0 ||
-        this.y > height
-      ) {
-        this.reset();
-      }
-
-    }
-
-    draw() {
-
-      ctx.beginPath();
-
-      ctx.arc(
-        this.x,
-        this.y,
-        this.size,
-        0,
-        Math.PI * 2
-      );
-
-      ctx.fillStyle =
-        `rgba(180,170,255,${this.alpha})`;
-
-      ctx.fill();
-
-    }
-
-  }
-
-  for (let i = 0; i < 80; i++) {
-    particles.push(new Particle());
-  }
-
-  function animate() {
-
-    ctx.clearRect(
-      0,
-      0,
-      width,
-      height
-    );
-
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
-
-    requestAnimationFrame(animate);
-
-  }
-
-  animate();
-
-
-</script><script>
+<script>
 document.querySelectorAll('.faq-item').forEach(d=>{const s=d.querySelector('summary'),p=d.querySelector('p'),wrap=document.createElement('div');wrap.className='faq-content';p.before(wrap);wrap.append(p);let animation; s.addEventListener('click',e=>{e.preventDefault();if(animation)return;const opening=!d.open,start=d.getBoundingClientRect().height;if(opening)d.open=true;const end=opening?d.getBoundingClientRect().height:s.getBoundingClientRect().height;if(matchMedia('(prefers-reduced-motion: reduce)').matches){d.open=opening;return;}animation=d.animate([{height:start+'px',opacity:1},{height:end+'px',opacity:1}],{duration:320,easing:'cubic-bezier(.22,1,.36,1)'});animation.onfinish=()=>{d.open=opening;animation=null;};});});
 document.getElementById('newsletter').addEventListener('submit',e=>{e.preventDefault();const email=document.getElementById('news-email').value;location.href='mailto:montellai.support@gmail.com?subject='+encodeURIComponent('Підписка на новини Montell AI')+'&body='+encodeURIComponent('Хочу отримувати новини Montell AI на '+email);});
-</script><script src="chat-config.js"></script><script src="chat.js"></script><script src="scroll-reveal.js"></script></body></html>
+</script><script src="chat-config.js"></script><script src="chat.js"></script><script src="scroll-reveal.js"></script><script type="module" src="assets/effects.js"></script></body></html>
