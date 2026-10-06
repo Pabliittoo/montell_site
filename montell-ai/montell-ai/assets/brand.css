@@ -91,3 +91,29 @@ html[data-theme=light] .button.ghost{background:linear-gradient(120deg,#f4f1ded9
 @media(prefers-reduced-motion:reduce){#shader-background{display:block;filter:none}.liquid-layer{display:none!important}}
 
 summary.liquid-target{border-radius:14px;padding-left:14px;padding-right:14px}.liquid-target:disabled{opacity:.55}
+
+/* Animated controls, fixed chat launcher and centred FAQ. */
+.language-switch{position:relative;isolation:isolate;gap:0;padding:3px}
+.language-switch a{position:relative;width:42px;text-align:center;z-index:1;padding:10px 0!important}
+.language-switch::before{content:'';position:absolute;z-index:0;left:3px;top:3px;bottom:3px;width:42px;border-radius:999px;background:#d4c4a838;border:1px solid #f4f1de44;box-shadow:inset 0 1px #fff4;transition:transform .32s cubic-bezier(.22,1,.36,1),background-color .5s}
+html[lang=en] .language-switch::before,.language-switch[data-selected=en]::before{transform:translateX(42px)}
+.language-switch[data-selected=uk]::before{transform:translateX(0)}
+.language-switch a[aria-current],html[data-theme=light] .language-switch a[aria-current]{background:transparent;box-shadow:none}
+html[data-theme=light] .language-switch::before{background:#f4f1de;border-color:#5e4b4333}
+.language-changing .language-switch{animation:language-pulse .32s ease}
+@keyframes language-pulse{50%{box-shadow:0 0 18px #d4c4a855}}
+::view-transition-old(root){animation:theme-out .55s ease both}
+::view-transition-new(root){animation:theme-in .55s ease both}
+@keyframes theme-out{to{opacity:0}}@keyframes theme-in{from{opacity:0}to{opacity:1}}
+body,nav .nav-inner,.glass,.widget,input,textarea,.faq-item,.theme-toggle{transition:background-color .55s ease,color .55s ease,border-color .55s ease,box-shadow .55s ease,transform .38s ease}
+#shader-background>div{transition:opacity .55s ease}
+button.chat-launch.liquid-target,button.chat-launch{position:fixed!important;left:auto!important;top:auto!important;right:max(20px,env(safe-area-inset-right))!important;bottom:max(20px,env(safe-area-inset-bottom))!important;z-index:201;margin:0;max-width:calc(100vw - 40px)}
+#faq .container{max-width:920px;margin-inline:auto}
+#faq .kicker,#faq h2{text-align:center;margin-inline:auto}
+#faq .faq{display:grid;gap:16px;margin:32px auto 0;width:100%}
+#faq .faq-item{border:1px solid var(--stroke);border-radius:18px;background:#0d1b2a44}
+#faq summary{padding:22px 24px;line-height:1.45;text-align:left}
+#faq .faq-content p{padding:0 24px 24px;margin:0;line-height:1.7}
+html[data-theme=light] #faq .faq-item{background:#f4f1de99}
+@media(max-width:600px){#faq summary{padding:18px;font-size:17px}#faq .faq-content p{padding:0 18px 18px}.language-switch a{width:36px}.language-switch::before{width:36px}html[lang=en] .language-switch::before,.language-switch[data-selected=en]::before{transform:translateX(36px)}.language-switch[data-selected=uk]::before{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.language-switch::before,body,nav .nav-inner,.glass,.widget,input,textarea,.faq-item,.theme-toggle,#shader-background>div{transition:none}.language-changing .language-switch{animation:none}}
