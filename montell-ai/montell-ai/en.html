@@ -957,16 +957,16 @@ h1{font-size:clamp(44px,6.2vw,84px);letter-spacing:-.045em} .hero{padding-top:14
 /* Shared frosted-card hover treatment */
 .glass{position:relative;isolation:isolate;transition:transform .38s cubic-bezier(.2,.75,.25,1),border-color .38s ease,box-shadow .38s ease;}
 .glass::before,.glass::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;opacity:0;transition:opacity .4s ease,transform .6s cubic-bezier(.2,.75,.25,1);}
-.glass::before{background:radial-gradient(ellipse at 15% 0%,rgba(168,146,255,.22),transparent 65%);}
-.glass::after{inset:1px;background:linear-gradient(115deg,transparent 15%,rgba(255,255,255,.075) 40%,rgba(168,146,255,.11) 48%,transparent 75%);transform:scaleX(.94);}
+.glass::before{background:radial-gradient(ellipse at 15% 0%,rgba(212,196,168,.22),transparent 65%);}
+.glass::after{inset:1px;background:linear-gradient(115deg,transparent 15%,rgba(255,255,255,.075) 40%,rgba(212,196,168,.11) 48%,transparent 75%);transform:scaleX(.94);}
 .glass .number{transition:color .35s ease;}
 @media(hover:hover) and (pointer:fine){
- .glass:hover{transform:translateY(-7px);border-color:rgba(168,146,255,.65);box-shadow:0 18px 45px -22px rgba(0,0,0,.8),0 0 30px -14px rgba(94,75,67,.65),inset 0 1px 0 rgba(255,255,255,.1);}
+ .glass:hover{transform:translateY(-7px);border-color:rgba(212,196,168,.65);box-shadow:0 18px 45px -22px rgba(0,0,0,.8),0 0 30px -14px rgba(94,75,67,.65),inset 0 1px 0 rgba(255,255,255,.1);}
  .glass:hover::before,.glass:hover::after{opacity:1;transform:scaleX(1);}
  .glass:hover .number{color:#d4c4a8;}
  .agent-showcase.glass:hover{transform:translateY(-3px);}
 }
-.glass:focus-within{border-color:rgba(168,146,255,.65);box-shadow:0 0 0 2px rgba(168,146,255,.16);}
+.glass:focus-within{border-color:rgba(212,196,168,.65);box-shadow:0 0 0 2px rgba(212,196,168,.16);}
 @media(prefers-reduced-motion:reduce){.glass,.glass::before,.glass::after,.glass .number{transition:none!important;}.glass:hover,.agent-showcase.glass:hover{transform:none;}.glass::after{transform:none;}}
 
 
