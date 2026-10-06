@@ -117,3 +117,15 @@ button.chat-launch.liquid-target,button.chat-launch{position:fixed!important;lef
 html[data-theme=light] #faq .faq-item{background:#f4f1de99}
 @media(max-width:600px){#faq summary{padding:18px;font-size:17px}#faq .faq-content p{padding:0 18px 18px}.language-switch a{width:36px}.language-switch::before{width:36px}html[lang=en] .language-switch::before,.language-switch[data-selected=en]::before{transform:translateX(36px)}.language-switch[data-selected=uk]::before{transform:translateX(0)}}
 @media(prefers-reduced-motion:reduce){.language-switch::before,body,nav .nav-inner,.glass,.widget,input,textarea,.faq-item,.theme-toggle,#shader-background>div{transition:none}.language-changing .language-switch{animation:none}}
+
+/* Visible ivory / sage / gold motion, retaining readable dark text. */
+html[data-theme=light] #shader-background>div{opacity:.58;filter:saturate(.7) brightness(1.55)}
+html[data-theme=light] #shader-background::after{background:rgba(244,241,222,.12)}
+.widget{transform-origin:bottom right}
+.widget header{align-items:center;gap:16px}
+.widget header button.chat-close{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;min-width:36px;padding:0;flex:0 0 36px;border-radius:50%;border:1px solid #d4c4a844;background:#d4c4a814;color:#f4f1de;line-height:1;overflow:hidden;transition:background-color .2s,transform .2s}
+.widget header button.chat-close svg{display:block;width:18px;height:18px;pointer-events:none}
+.widget header button.chat-close:hover{background:#d4c4a833;transform:rotate(90deg)}
+html[data-theme=light] .widget header button.chat-close{background:#d4c4a855;border-color:#5e4b4344;color:#0d1b2a}
+.widget header button.chat-close:focus-visible{outline:2px solid var(--purple2);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.widget header button.chat-close{transition:none}.widget header button.chat-close:hover{transform:none}}
